@@ -11,13 +11,18 @@
     "url": "git+https://github.com/didaunesp/liquid-art.git"
   },
   "author": "didaunesp",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/didaunesp/liquid-art/issues"
   },
   "homepage": "https://github.com/didaunesp/liquid-art#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
-    "hardhat": "^2.11.0"
+    "hardhat": "^2.11.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3"
   }
 }
