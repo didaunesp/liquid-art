@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.ts"
   },
   "repository": {
     "type": "git",
@@ -17,12 +18,12 @@
   },
   "homepage": "https://github.com/didaunesp/liquid-art#readme",
   "devDependencies": {
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.6",
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
+    "@openzeppelin/contracts": "^4.7.3",
     "hardhat": "^2.11.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.2"
-  },
-  "dependencies": {
-    "@openzeppelin/contracts": "^4.7.3"
   }
 }
