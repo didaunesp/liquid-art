@@ -1,11 +1,15 @@
-const express = require("express");
-const cors = require("cors");
-const app = express();
+import express, { Request, Response } from "express";
+import cors from "cors";
+
+import blockchain from "./blockchain";
+
 const tokens = require("./tokens.json");
+
+const app = express();
 
 app.use(cors());
 
-app.get("/:tokenId", (req, res) => {
+app.get("/nft/:tokenId", (req: Request, res: Response): Response => {
   const { tokenId } = req.params;
   const token = tokens[tokenId];
   if (typeof token === "undefined") {
@@ -13,6 +17,8 @@ app.get("/:tokenId", (req, res) => {
   }
   return res.json(token);
 });
+
+app.get("/blockchain", (req: Request, res: Response) => blockchain(req, res));
 
 app.listen(8003);
 
